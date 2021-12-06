@@ -7,8 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="{{url_for('static',filename='main.css')}}" rel="stylesheet" />
+    
     <title>NEWS API</title>
+    <%- include("static/styles.ejs"); %>
   </head>
   <body>
     <h1>Welcome to News API</h1>
@@ -16,6 +17,9 @@
     <!--Nav Bar-->
     <div class="header">
         <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="'/'">NEWS API</a>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About NEWS</a>
             </li>
@@ -45,19 +49,7 @@
             <p>You can search for articles by using a keyword, Date Published, or Source Domain Name</p>
             <p>Give it a try!</p>
             <form action="/" method="POST">
-              <select id="keyword" name="keyword">
-                  <option selected disabled>--Select Keyword--</option>
-                  <option>Apple</option>
-                  <option>Samsung</option>
-                  <option>Google</option>
-                  <option>Microsoft</option>
-                  <option>Tesla</option>
-                  <option>NASA</option>
-                  <option>BMW</option>
-                  <option>Amazon</option>
-                  <option>Chick-fil-a</option>
-                  <option>Covid-19</option>
-              </select>
+                <input type="text" id="keyword" name="keyword" placeholder="keyword">
               <input type="date" name="date" id="date" placeholder="mm/dd/yyyy" >
               <button formaction="/" type="submit">
                   Search
@@ -65,7 +57,7 @@
           </form>
           <h1>Here are the results</h1>
           <% if (newsdata != null) { %>
-              <h1><%= newsdata %></h1>
+              <h1><%= newsdata.totalResults %></h1>
           <% } %>
         </section>
         <section id="contact" class="contact">
@@ -74,47 +66,7 @@
         </section>
     </main>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <section id="about" class="about">
-                <h2>About US</h2>
-                <p>We are a student created website, developed to provide users with the NEWS based on the user selection.</p>
-            </section>
-          </div>
-          <div class="carousel-item">
-            <section id="why" class="why">
-                <h2>Why US</h2>
-                <p>Here are some suggestions about why to use our website. </p>
-            </section>
-          </div>
-          <div class="carousel-item">
-            <section id="ways" class="ways">
-                <h2>Ways</h2>
-                <p>There are so many ways to obtain NEWS from all over the world. Here's a few methods: </p>
-            </section>
-          </div>
-          <div class="carousel-item">
-            <section id="ways" class="ways">
-                <h2>Ways</h2>
-                <p>There are so many ways to obtain NEWS from all over the world. Here's a few methods: </p>
-            </section>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
