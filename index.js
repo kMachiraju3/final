@@ -16,10 +16,22 @@ app.post('/', function(req,res){
     axios.get(`https://newsapi.org/v2/everything?q=${req.body.keyword}&from=${req.body.date}&apikey=1d495c7b5c89457c8760dc87f4da8a1f
     `)
     .then(function(response){
+
+        let dataTitle = [];
+        let dataAuthor = [];
+        let dataUrl = [];
+
         newsdata = response.data
-        res.json(newsdata);
-        console.log(newsdata);
-        const info= [];
+        //res.json(newsdata);
+        //console.log(newsdata);
+        console.log(JSON.stringify(newsdata));
+        res.json(JSON.stringify(newsdata));
+
+        dataTitle = title;
+        dataAuthor = author;
+        dataUrl = url;
+        
+        
         
         res.redirect('/');
     })
