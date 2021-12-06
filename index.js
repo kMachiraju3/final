@@ -17,7 +17,9 @@ app.post('/', function(req,res){
     `)
     .then(function(response){
         newsdata = response.data
+        res.json(newsdata);
         console.log(newsdata);
+        const info= [];
         
         res.redirect('/');
     })
