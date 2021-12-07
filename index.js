@@ -17,21 +17,11 @@ app.post('/', function(req,res){
     `)
     .then(function(response){
 
-        let dataTitle = [];
-        let dataAuthor = [];
-        let dataUrl = [];
-
         newsdata = response.data
         //res.json(newsdata);
-        //console.log(newsdata);
-        console.log(JSON.stringify(newsdata));
-        res.json(JSON.stringify(newsdata));
-
-        dataTitle = title;
-        dataAuthor = author;
-        dataUrl = url;
-        
-        
+        console.log(newsdata);
+        //console.log(JSON.stringify(newsdata));
+        //res.json(JSON.stringify(newsdata));
         
         res.redirect('/');
     })
