@@ -12,28 +12,35 @@
     <%- include("static/styles.ejs"); %>
   </head>
   <body>
-    <h1>Welcome to News API</h1>
-
-    <!--Nav Bar-->
-    <div class="header">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" href="'/'">NEWS API</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About NEWS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#why">Why US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ways">Different Ways</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact US</a>
-            </li>
-        </ul>
+    <h1>Welcome to our NEWS API</h1>
+    
+    <!--Alerts-->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hey there..!!!</strong> You should check out our website.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
+    <!--Nav bar-->
+    <div class="header">
+      <ul class="nav nav-fill">
+        <li class="nav-item">
+          <img src="../static/images/NEWS.png" href= "/" alt="Logo" style="height: 100px; width: 250px;"/>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" style="font-size: 20px; padding-top: 2em;">About NEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#why" style="font-size: 20px; padding-top: 2em;">Why US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ways" style="font-size: 20px; padding-top: 2em;">Different Ways</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" style="font-size: 20px; padding-top: 2em;">Contact US</a>
+          </li>
+      </ul>
+    </div>
+
     <main id="main" role="main" class="info">
         <section id="about" class="about">
             <h2>About US</h2>
@@ -66,7 +73,6 @@
         </section>
     </main>
 
-    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
