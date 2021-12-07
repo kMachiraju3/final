@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use( express.static( "public" ) );
 
 
+
 app.get('/', function(request, response){
     response.render('main', {newsdata : newsdata});
 });
