@@ -53,7 +53,7 @@
         <section id="ways" class="ways">
             <h2>Ways</h2>
             <p>There are so many ways to obtain NEWS from all over the world. Here's a few methods: </p>
-            <p>You can search for articles by using a Keyword, Date Published, or Source Domain Name</p>
+            <p>You can search for articles by using a Keyword or Date Published</p>
             <p>Give it a try!</p>
             <form action="/" method="POST">
                 <input type="text" id="keyword" name="keyword" placeholder="keyword">
@@ -62,14 +62,16 @@
                   Search
               </button>
           </form>
-          <h1>Here are the results</h1>
+          <h1>Here are the results:</h1>
           
           <% if (newsdata != null) { %><h1><%= newsdata.totalresults %></h1><% } %>
 
         </section>
         <section id="contact" class="contact">
             <h2>Contact US</h2>
-            <p>To get more info, contact us....</p>
+            <p>To get more info, contact us by:</p>
+            <p><a href="mailto:someone@example.com">Email</a></p>
+            <p><a href="tel:+4733378901">Phone</a></p>
         </section>
     </main>
 
