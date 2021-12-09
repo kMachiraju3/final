@@ -142,12 +142,13 @@
           </form>
           <!-- outputs top five articles -->
           <% if (newsdata != null) { %>
-            <h2>Here are the results:</h2>
+            <h2>Here are the top five articles from your request:</h2>
             <% for(var i = 0; i < 6; i++) {%> 
               <div class="col-sm-6"> 
                 <div class="panel ">
-                  <div class="panel-heading"><center><a href="<%- newsdata.articles[i].url%>"><h5><%- newsdata.articles[i].title %></h5></a></center></div>
-                  <div class="panel-body"><center><img src="<%- newsdata.articles[i].urlToImage %>" style="width:auto;height:100px;"></center></div>  
+                  <div class="panel-heading"><center><h2><%- newsdata.articles[i].title %></h2></center></div>
+                  <div class="panel-body"><center><a href="<%- newsdata.articles[i].url%>"><img src="<%- newsdata.articles[i].urlToImage %>" style="width:auto;height:100px;"></a></center></div>  
+                  <div class="panel-footer"><center><p><%- newsdata.articles[i].description %></p></center></div>
                 </div>
               </div>
             <% } %> 
@@ -158,7 +159,7 @@
           
             <h2>Contact US</h2>
             <br>
-            <form class="form-inline">To get more info, contact us by:
+            <form class="form-inline"><h5>To get more info, contact us by:</h5>
               <br>
               <p><a href="mailto:someone@example.com">Email</a></p>
               <p><a href="tel:+4733378901">Phone</a></p>
