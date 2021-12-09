@@ -137,13 +137,14 @@
                   <p>Search</p>
               </button>
           </form>
-          <h2>Here are the results:</h2>
+          
          
           <!-- outputs top five articles -->
           <% if (newsdata != null) { %>
-            <h1><%- newsdata.totalResults %></h1>
+            <h2>Here are the results:</h2>
             <% for(var i = 0; i < 6; i++) {%> 
-              <li><a href="<%- newsdata.articles[i].url%>"><%- newsdata.articles[i].title %></a></li>
+              <li><center><img src="<%- newsdata.articles[i].urlToImage %>" href= "/" alt="Logo" style="height: 100px; width: auto;"/></center></li>
+              <li><center><a href="<%- newsdata.articles[i].url%>"><%- newsdata.articles[i].title %></a></center></li>
             <% } %>
           
           <% } %>
