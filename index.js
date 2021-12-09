@@ -21,11 +21,14 @@ app.post('/', function(req,res){
        
        newsdata = response.data
 
-        res.json(newsdata);
+        // res.json(newsdata);
         console.log(newsdata);
-        console.log(JSON.stringify(newsdata));
-        res.json(JSON.stringify(newsdata));
-        console.log(newsdata)
+        // console.log(JSON.stringify(newsdata));
+        // res.json(JSON.stringify(newsdata));
+        // console.log(newsdata)
+
+
+        
         res.redirect('/');
    })
    .catch(function(error){
