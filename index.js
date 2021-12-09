@@ -8,7 +8,6 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use( express.static( "public" ) );
 
 
-
 app.get('/', function(request, response){
     response.render('main', {newsdata : newsdata});
 });
@@ -35,6 +34,7 @@ app.post('/', function(req,res){
    })
    //res.send('Here are your results: ', newsdata); //replace with your data here
 });
+
 
 
 
