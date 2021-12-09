@@ -19,23 +19,15 @@ app.post('/', function(req,res){
    .then(function(response){
 
        
-       newsdata = response.data
-
-        // res.json(newsdata);
+       newsdata = response.data;      
         console.log(newsdata);
-        // console.log(JSON.stringify(newsdata));
-        // res.json(JSON.stringify(newsdata));
-        // console.log(newsdata)
-
-
-        
+               
         res.redirect('/');
    })
    .catch(function(error){
        console.log(error);
        res.redirect('/');
    })
-   //res.send('Here are your results: ', newsdata); //replace with your data here
 });
 
 
